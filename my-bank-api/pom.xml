@@ -8,8 +8,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.yr.atomikos</groupId>
-    <artifactId>second-bank-api</artifactId>
+    <artifactId>first-bank-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>second-bank-api</name>
+    <name>first-bank-api</name>
     <description>demo project to test distributed transactions with rest apis</description>
 </project>
