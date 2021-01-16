@@ -1,1 +1,5 @@
-
+server:
+  port: ${SERVER_PORT:8081}
+bank:
+  code: ${BANK_CODE:YSH}
+  name: ${BANK_NAME:Yohan Banking Coparation}

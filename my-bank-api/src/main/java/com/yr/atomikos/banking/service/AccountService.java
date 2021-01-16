@@ -1,2 +1,9 @@
-package com.yr.atomikos.banking;public class AccountService {
+package com.yr.atomikos.banking.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AccountService {
+
+
 }
