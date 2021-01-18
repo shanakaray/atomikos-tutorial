@@ -2,7 +2,7 @@
 ## atomikos tutorial and test eventual data consistency with micro services.
 
 ### Prerequisites 
--1) Maven 3.6.2 or higher and java 11.
+- 1) Maven 3.6.2 or higher and java 11.
 
 ### Instructions
 
