@@ -17,7 +17,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties(value = {"created", "lastModified"}, allowGetters = true)
+@JsonIgnoreProperties(value = {"created", "lastModified","bankCode"}, allowGetters = true)
 @NoArgsConstructor
 public class Account {
 
@@ -30,11 +30,15 @@ public class Account {
     @Column(nullable = false)
     private String name;
 
-    @NotEmpty
     @Column(nullable = false)
     private String bankCode;
 
+    @NotEmpty
+    @Column(nullable = false)
+    private String currencyCode;
+
     private BigDecimal balance;
+
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     @Column(updatable = false)

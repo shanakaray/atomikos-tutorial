@@ -23,3 +23,8 @@ spring:
 bank:
   code: ${BANK_CODE:YSH}
   name: ${BANK_NAME:Yohan Banking Coparation}
+
+logging:
+  level:
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.transaction: DEBUG
