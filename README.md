@@ -1,5 +1,6 @@
 # Atomikos Tutorial
-##<img src="https://raw.githubusercontent.com/spring-projects/spring-framework/master/src/docs/spring-framework.png" width="80" height="80" alt="spring-framework.png"> Spring Framework  <img src="https://raw.githubusercontent.com/atomikos/transactions-essentials/master/.github/Atomikos_Logo_Background.png" width="80" height="80" > Atomikos
+
+####<img src="https://raw.githubusercontent.com/spring-projects/spring-framework/master/src/docs/spring-framework.png" width="80" height="80" alt="spring-framework.png"> Spring Framework  <img src="https://raw.githubusercontent.com/atomikos/transactions-essentials/master/.github/Atomikos_Logo_Background.png" width="80" height="80" > Atomikos
 
 ## [Atomikos](https://www.atomikos.com) tutorial and test eventual data consistency with micro-services.
 
