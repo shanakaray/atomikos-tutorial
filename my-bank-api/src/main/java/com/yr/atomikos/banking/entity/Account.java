@@ -17,7 +17,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties(value = {"created", "lastModified","bankCode"}, allowGetters = true)
+@JsonIgnoreProperties(value = {"created", "lastModified", "bankCode"}, allowGetters = true)
 @NoArgsConstructor
 public class Account {
 
