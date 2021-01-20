@@ -1,0 +1,31 @@
+version: '3'
+services:
+  bank-one:
+
+    image: docker.io/library/my-bank-api:0.0.1-SNAPSHOT
+    networks:
+      -  banking
+    environment:
+      - "SERVER_PORT=80"
+      - "BANK_CODE=BAN_ONE"
+      - "BANK_NAME=BANK ONE"
+    ports:
+      - "8081:80"
+    volumes:
+      - "/tmp/one_data:/tmp/data"
+
+  bank-two:
+
+    image: docker.io/library/my-bank-api:0.0.1-SNAPSHOT
+    networks:
+      -  banking
+    environment:
+      - "SERVER_PORT=80"
+      - "BANK_CODE=BAN_TWO"
+      - "BANK_NAME=BANK TWO"
+    ports:
+      - "8082:80"
+    volumes:
+      - "/tmp/sec_data:/tmp/data"
+networks:
+  banking: {}

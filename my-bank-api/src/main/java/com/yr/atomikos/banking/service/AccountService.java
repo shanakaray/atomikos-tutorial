@@ -42,14 +42,19 @@ public class AccountService {
         Account account = accountDAO.getOne(fromAccountNumber);
 
         if (!map.containsKey(transfer.getBankCode().toUpperCase())) {
-            throw new HttpClientErrorException(HttpStatus.SERVICE_UNAVAILABLE);
+            throw new HttpClientErrorException(HttpStatus.SERVICE_UNAVAILABLE, "No Bank Code Configuration Found.");
         }
 
         if (account.getBalance().subtract(transfer.getAmount()).doubleValue() < 0) {
-            throw new HttpClientErrorException(HttpStatus.EXPECTATION_FAILED);
+            throw new HttpClientErrorException(HttpStatus.EXPECTATION_FAILED, "Insufficient Funds.");
         }
 
         if (transfer.getBankCode().equalsIgnoreCase(defaultBankCode)) {
+
+            if (fromAccountNumber.equals(transfer.getAccountNumber())) {
+                throw new HttpClientErrorException(HttpStatus.EXPECTATION_FAILED, "Same Account Transaction.");
+            }
+
             return directDeposit(transfer.getAccountNumber(), transfer);
         }
 
@@ -71,7 +76,7 @@ public class AccountService {
         Optional<Account> accountOptional = accountDAO.findById(fromAccountNumber);
 
         if (!accountOptional.isPresent()) {
-            throw new HttpClientErrorException(HttpStatus.resolve(420));
+            throw new HttpClientErrorException(HttpStatus.resolve(420), "Depositing Account Not Found.");
         }
 
         Account account = accountOptional.get();

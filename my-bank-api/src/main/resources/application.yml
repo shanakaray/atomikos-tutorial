@@ -1,10 +1,10 @@
 server:
-  port: ${SERVER_PORT:8082}
+  port: ${SERVER_PORT:8081}
 
 spring:
   datasource:
     initialization-mode: always
-    url: jdbc:h2:file:/tmp/jpadb1
+    url: jdbc:h2:file:/tmp/data
     driverClassName: org.h2.Driver
     username: sa
     password: sa
@@ -21,13 +21,12 @@ spring:
         use_sql_comments: false
         format_sql: false
 bank:
-  code: ${BANK_CODE:YSS}
-  name: ${BANK_NAME:Yohan Banking Coparation}
+  code: ${BANK_CODE:BAN_ONE}
+  name: ${BANK_NAME:Bank ONE Coperation}
 bankcode-url:
   map:
-    "YSH" : "http://yohans-macbook-pro.local:8081"
-    "YSS" : "http://yohans-macbook-pro.local:8082"
-    "YSC" : "http://yohans-macbook-pro.local:8083"
+    "BAN_ONE" : "http://bank-one"
+    "BAN_TWO" : "http://bank-two"
 
 logging:
   level:
