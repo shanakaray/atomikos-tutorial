@@ -59,7 +59,7 @@ public class AccountService {
 
         ResponseEntity<Account> response = restTemplate.postForEntity(url.toString(), transfer, Account.class);
 
-        if (response.getStatusCode().is2xxSuccessful()) {
+        if (response.getStatusCode() == HttpStatus.OK) {
             account.setBalance(account.getBalance().subtract(transfer.getAmount()));
             accountDAO.save(account);
         }
