@@ -11,6 +11,7 @@
 
 ## Instructions
 
+- "Copy repository" `git clone https://github.com/shanakaray/atomikos-tutorial.git`
 - "To build jar file" `mvn clean install`
 - "To build docker image" `mvn spring-boot:build-image docker` default image name `docker.io/mybank-api:0.0.1-SNAPSHOT:0.0.1-SNAPSHOT`
 - `cd /docker/` and execute `% docker-compose up -d`
