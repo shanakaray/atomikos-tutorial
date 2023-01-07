@@ -6,3 +6,4 @@ target
 *.class
 *.jar
 *.iml
+.vscode/settings.json
